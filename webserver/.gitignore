@@ -1,0 +1,7 @@
+.env
+config/build-config.json
+build/
+node_modules
+.*.swp
+
+

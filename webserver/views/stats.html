@@ -1,0 +1,117 @@
+{{##def.page_title = 'Stats' #}}
+
+{{##def.content:
+    <div class="content row panel radius">
+        <div class="row">
+            <div class="large-6 columns">
+                <h5>Bustabit.com Statistics</h5>
+                <small>Generated {{! it.generated }}</small>
+                <table class="stats">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <b>Pending Withdraws:</b><br />
+                                <small>(withdrawals that require admin to look at)</small>
+
+                            </td>
+                            <td>{{= it.stats.pending_withdrawals.count }}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Unterminated Games:</b><br />
+                                <small>(games that require admin to look at)</small>
+                            </td>
+                            <td>{{=it.stats.unterminated_games.count}} </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Deposits:</b></td>
+                            <td>{{#def.format: {n: it.stats.deposits.sum} }} bits</td>
+                        </tr>
+                        <tr>
+                            <td><b>Withdrawals:</b></td>
+                            <td>{{#def.format: { n: it.stats.withdrawals.sum } }} bits</td>
+                        </tr>
+                        <tr>
+                            <td class="strong">Net:</td>
+                            <td class="strong">{{#def.format: { n: (it.stats.deposits.sum - (it.stats.withdrawals.sum * -1)) } }} bits</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><b>Total Wagered:</b></td>
+                            <td>{{#def.format: {n: it.stats.plays.total_bet } }} bits</td>
+                        </tr>
+                        <tr>
+                            <td><b>Players won in cashed:</b></td>
+                            <td>{{#def.format: {n: it.stats.plays.cashed_out } }} bits <small>(
+                                   {{= (it.stats.plays.cashed_out / it.stats.plays.total_bet * 100).toFixed(2) }}%
+                                )</small></td>
+                        </tr>
+                        <tr>
+                            <td><b>Players won in bonuses:</b></td>
+                            <td>{{#def.format: {n: it.stats.plays.bonused } }} bits <small>(
+                                {{= (it.stats.plays.bonused / it.stats.plays.total_bet * 100).toFixed(2) }}%
+                                )</small></td>
+                        </tr>
+                        <tr>
+                            <td><b>Players won in total: </b></td>
+                            <td>{{#def.format: {n: (9 + it.stats.plays.cashed_out + it.stats.plays.bonused) } }} bits <small>(
+                                {{= ((it.stats.plays.cashed_out + it.stats.plays.bonused) / it.stats.plays.total_bet * 100).toFixed(2) }}%
+                                )</small></td>
+                        </tr>
+                        <tr>
+                            <td class="strong">Our Profit:</td>
+                            <td class="strong">
+                                {{#def.format: {n: it.stats.plays.total_bet - it.stats.plays.cashed_out - it.stats.plays.bonused  } }} bits
+                                <small>(
+                                    {{= ((it.stats.plays.total_bet - it.stats.plays.cashed_out - it.stats.plays.bonused ) / it.stats.plays.total_bet * 100).toFixed(2) }}%
+                                    )</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="strong">Bankroll:</td>
+                            <td class="strong">
+                                {{#def.format: {n: it.stats.plays.total_bet - it.stats.plays.cashed_out - it.stats.plays.bonused + it.stats.bankroll_offset } }} bits
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="strong">Max win per game:</td>
+                            <td>
+                                {{#def.format: {n: (it.stats.plays.total_bet - it.stats.plays.cashed_out - it.stats.plays.bonused + it.stats.bankroll_offset)*0.03 } }} bits
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><b>Total Users:</b></td>
+                            <td>{{=it.stats.users.count}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Total Plays:</b></td>
+                            <td>{{=it.stats.plays.count }}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Total Games:</b></td>
+                            <td>{{=it.stats.games.count}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+ #}}
+
+{{#def.include('./template/main_old')}}

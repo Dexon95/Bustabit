@@ -1,0 +1,20 @@
+{
+  "name": "bv-notifier",
+  "description": "An alerting service for bitcoin transactions.",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "async": "~0.7.0",
+    "better-assert": "~1.0.0",
+    "bitcoin": "~2.1.2",
+    "bitcoinjs-lib": "^2.2.0",
+    "debug": "^2.2.0",
+    "pg": "^4.5.1"
+  },
+  "scripts": {
+    "start-dev": "env $(cat .env | xargs) nodemon daemon.js",
+    "start": "env $(cat .env | xargs) forever start daemon.js",
+    "generate-addresses": "env $(cat .env | xargs) node ./src/generate_addresses > .addresses.json",
+    "generate-wallet": "env $(cat .env | xargs) node ./src/generate_wallet > .wallet.sh"
+  }
+}

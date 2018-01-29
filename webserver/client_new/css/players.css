@@ -1,0 +1,147 @@
+#players-container {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 1.5rem;
+    overflow-y: auto;
+}
+
+#players-container .header-bg {
+    height: 1.5rem;
+    right: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    background: #ddd;
+}
+
+#players-container table .th-inner {
+    position: absolute;
+    top: 0;
+    line-height: 1.5rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: left;
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.03);
+    box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.03);
+    color: black;
+    font-weight: 600;
+    padding-left: 10px;
+    margin-left: -10px;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+
+}
+
+#players-container table th:first-child .th-inner {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+}
+
+/* table */
+#players-container .users-playing, #players-container .users-summary {
+    width: 100%;
+    font-weight: 500;
+    table-layout: fixed;
+}
+
+#players-container .users-playing thead, #players-container .users-summary thead {
+    z-index: 3000;
+}
+
+#players-container .users-playing thead tr, #players-container .users-summary thead tr {
+}
+
+#players-container .users-playing tbody, #players-container .users-summary tbody {
+    height: 100%;
+}
+
+#players-container .users-playing tbody tr, #players-container .users-summary tbody tr {
+    width: 100%;
+}
+
+#players-container .users-playing td, .users-playing th, #players-container .users-summary td, .users-summary th{
+    overflow: hidden;
+    text-align: left;
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+}
+
+/*#players-container .bonus-projection {*/
+    /*opacity: 0.5;*/
+/*}*/
+
+#players-container .users-summary tr:nth-of-type(even), #players-container .users-playing tr:nth-of-type(even) {
+}
+
+
+#players-container .users-playing td, #players-container .users-playing th {
+    padding-left: 6px;
+    width: 20%;
+}
+
+#players-container .users-playing td, #players-container .users-playing th {
+    padding-left: 6px;
+    line-height: 1.3rem;
+}
+
+
+/* Adjust columns */
+
+#players-container .users-playing th:nth-child(1), #players-container .users-playing td:nth-child(1) {
+    width: 28%;
+    padding-left: 0.2rem;
+}
+
+#players-container .users-playing th:nth-child(2), #players-container .users-playing td:nth-child(2) {
+    width: 15%;
+}
+
+#players-container .users-playing th:nth-child(3), #players-container .users-playing td:nth-child(3) {
+    width: 20%;
+}
+
+#players-container .users-playing th:nth-child(4), #players-container .users-playing td:nth-child(4) {
+    width: 17%;
+}
+
+#players-container .users-playing th:nth-child(5), #players-container .users-playing td:nth-child(5) {
+    width: 20%; 
+}
+
+
+/* Playing/Lost/Cashed/Won Colors
+   ========================================================================== */
+
+tr.user-won.me {
+    background-color: rgba(12, 203, 30, .2);
+}
+.user-won td, .user-won td a {
+    color: #408609;
+}
+
+tr.user-lost.me {
+    background-color: rgba(224, 62, 62, .2);
+}
+.user-lost td, .user-lost td a {
+    color: #e03e3e;
+}
+
+tr.user-playing.me {
+    background-color: rgba(255, 129, 0 , .2);
+}
+.user-playing td, .user-playing td a {
+    color: #ff8100;
+}
+
+tr.user-cashed.me {
+    background-color: rgba(12, 203, 30, .2);
+}
+.user-cashed td, .user-cashed td a {
+    color: #408609;
+}

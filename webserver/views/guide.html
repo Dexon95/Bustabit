@@ -1,0 +1,50 @@
+{{##def.page_title = 'Strategy Guide' #}}
+
+{{##def.content:
+<div class="row faq panel radius">
+    <h3>Strategy Guide</h3>
+    <hr>
+    <p>
+        <b>Bustabit</b> is a game of 99% luck, but 1% skill. This means that if you play in a strategy-oblivious way, you'll
+        not do too bad. But with a good enough strategy, it's actually possible to overcome the house odds, and even make
+        a profit.
+
+    </p>
+    <p><b>Here's how it works:</b></p>
+
+    <h4>Instabust</h4>
+    <p>
+        Right off the bat, there's a <b>1%</b> chance of the game instantly busting. If this happens, no one can win anything.
+        This means bustabit.com has an expected return of <code>1% * playersInGame * tableAmount</code>. This is the <b>exact amount</b>
+        bustabit uses to give out bonuses.
+    </p>
+
+    <h4>House Edge</h4>
+    <p>
+        It scales between 0 and 1% <smaal><a href="/calculator" target="_blank">see: odds and calculator.</a></smaal>
+        This is what you need to overcome!
+    </p>
+
+    <h4>Bonuses</h4>
+    <p>
+        The last person to <b>cash out</b> before a bust gets a bonus, which on average is exactly the same as the server makes
+        from the instabust <a href="/faq#bonusfunded">see: faq</a>. Strategic play revolves completely around trying to get this bonus. If no one
+        collects the bonus, it <b>rolls to the next game.</b>
+    </p>
+
+    <h4>Single Player Game</h4>
+    <p>
+        If you're playing a game, and no one else joins, it's not possible to overcome the <b>house odds</b>, and it becomes
+        a simple game of luck.
+    </p>
+
+    <h4>Simple Greedy Strategy</h4>
+    <p>
+        Hold in the game, as soon as you're the last person holding, cash out immediately. This is a great strategy if
+        all your opponents are conservative, and cash out early. However, if you play against someone with the same
+        strategy -- <b>you will both will infinitely hold, and never win the bonus.</b>
+    </p>
+</div>
+
+#}}
+{{#def.include('./template/main_old')}}

@@ -1,0 +1,51 @@
+{{##def.page_title = 'Leader Board' #}}
+
+{{##def.content:
+<div class="content row panel radius">
+
+    <h5 id="top">Top 100 players</h5>
+    <hr>
+    <table class="leaders">
+        <thead>
+            <tr>
+                <td>
+                    Rank
+                </td>
+                <td>
+                    Player
+                </td>
+                <td class="ldb-gross">
+                    {{?it.sortBy != 'gross_profit'}}<a href="/leaderboard"><i class="fa fa-sort-desc"></i></a>{{?}} Gross Profit <strong><a href="/faq#gross-profit">?</a></strong>
+                </td>
+                <td class="ldb-net">
+                    {{?it.sortBy != 'net_profit' || it.order != 'DESC' }}<a href="/leaderboard?by=net_desc"><i class="fa fa-sort-desc"></i></a>{{?}} Net Profit {{?it.sortBy != 'net_profit' || it.order != 'ASC' }}<a href="/leaderboard?by=net_asc"><i class="fa fa-sort-asc"></i></a>{{?}}
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+
+            {{~it.leaders :leader:index}}
+                <tr>
+                    <td>
+                        {{=leader.rank}}
+                    </td>
+                    <td>
+                        <a href="/user/{{=leader.username}}">{{=leader.username}}</a>
+                    </td>
+                    <td>
+                        {{#def.format: { n: leader.gross_profit, decimals: 2 } }}
+                    </td>
+                    <td>
+                        {{#def.format: { n: leader.net_profit, decimals: 2 } }}
+                    </td>
+                </tr>
+            {{~}}
+
+        </tbody>
+    </table>
+
+    {{?it.leaders.length > 20 }} <a class="border-button red right" href="#top">Top</a>{{?}}
+</div>
+#}}
+
+{{#def.include('./template/main_old')}}

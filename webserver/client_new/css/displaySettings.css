@@ -1,0 +1,29 @@
+#display-settings-container {
+    width: 100%;
+    height: 100%;
+}
+
+#display-settings-container .option-row {
+    line-height: 2rem;
+}
+
+#display-settings-container .option-row:nth-of-type(even) {
+    background-color: whitesmoke;
+}
+
+#display-settings-container .option-text {
+    padding-left: 0.2rem;
+    padding-right: 0.3rem;
+}
+
+#display-settings-container select {
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    color: black;
+    border-radius: 0;
+    display: inline-block;
+    height: 1rem;
+    cursor: pointer;
+    outline: none;
+    /* padding-left: 1rem; */
+}

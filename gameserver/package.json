@@ -1,0 +1,23 @@
+{
+  "name": "MoneyPot",
+  "version": "0.0.1",
+  "engines": {
+    "node": "~0.10.32"
+  },
+  "dependencies": {
+    "CBuffer": "~0.1.4",
+    "async": "~0.8.0",
+    "better-assert": "~1.0.0",
+    "binary-search": "^1.2.0",
+    "debug": "^2.2.0",
+    "lodash": "~2.4.1",
+    "pg": "~3.3.0",
+    "socket.io": "~1.2.0",
+    "uuid": "^2.0.1"
+  },
+  "scripts": {
+    "start-dev": "env $(cat .env | xargs) nodemon server.js --use_strict",
+    "start": "node server.js --use_strict"
+  },
+  "devDependencies": {}
+}

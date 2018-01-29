@@ -1,0 +1,62 @@
+{{##def.page_title = 'Game Info' #}}
+
+{{##def.content:
+    <div class="row panel radius">
+        <h4>Game #<strong>{{=it.game.id}}</strong> information</h4>
+        <p>
+            <b>Busted At: </b> {{#def.format: { n: it.game.game_crash, decimals: 2 } }}x
+        </p>
+        <p>
+            <b>Played: </b>{{=it.game.created}} <small>{{=it.game.timeago}}</small>
+        </p>
+        <hr>
+        <h6>Players</h6>
+        <table class="user-table">
+          <thead>
+            <tr>
+                <td>Player</td>
+                <td>Bet</td>
+                <td>Cashed Out</td>
+                <td>Bonus</td>
+                <td>Profit</td>
+            </tr>
+          </thead>
+          <tbody>
+            {{~it.plays :play:index}}
+                <tr {{?!play.cash_out}}class="lose"{{?}}>
+                    <td>
+                        <strong>
+                            <a href="/user/{{=play.username}}">{{=play.username}}</a>
+                        </strong>
+                    </td>
+                    <td>
+                        {{#def.format: { n: play.bet } }} bits
+                    </td>
+                    <td>
+                        {{? play.cash_out}}
+                        {{#def.format: {n: play.cash_out / play.bet * 100, decimals: 2} }}x
+                        {{??}}
+                        Lose
+                        {{?}}
+                    </td>
+                    <td>
+                        {{? play.bonus }}
+                           {{#def.format: {n: play.bonus/play.bet* 100 * 100, decimals: 2} }}%
+                        {{??}}
+                          -
+                        {{?}}
+                    </td>
+                    <td>
+                        {{#def.format: { n: (play.cash_out ? play.cash_out : 0) - play.bet + ( play.bonus ? play.bonus : 0) , decimals: 2 } }}
+                        bits
+                    </td>
+                </tr>
+            {{~}}
+          </tbody>
+        </table>
+        <h6><b>Hash:</b> <a href="/faq#fair">{{=it.game.hash}}</a></h6>
+    </div>
+
+#}}
+
+{{#def.include('./template/main_old')}}

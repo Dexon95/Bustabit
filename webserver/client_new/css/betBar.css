@@ -1,0 +1,47 @@
+.bet-bar-container, .bet-bar-starting {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: .3em;
+    background-color: white;
+}
+
+.bet-bar-starting {
+    background-color: #ff8100;
+}
+
+.bet-bar-container {
+}
+
+.bet-bar-playing, .bet-bar-lost, .bet-bar-me-won, .bet-bar-me-lost, .bet-bar-me-playing, .bet-bar-me-cashed, .bet-bar-cashed, .bet-bar-won {
+    height: 100%;
+    float: left;
+}
+
+/* Colors for the players playing and lost */
+.bet-bar-playing {
+    background-color: #ff8100;
+}
+
+.bet-bar-lost {
+    background-color: #e03e3e;
+}
+
+/* Colors for the player */
+.bet-bar-me-lost {
+    background-color: rgba(224, 62, 62, .2);
+}
+
+.bet-bar-me-playing {
+    background-color: rgba(255, 129, 0 , .2);
+}
+
+.bet-bar-me-won, .bet-bar-me-cashed {
+    background-color: rgba(12, 203, 30, .2);
+}
+
+/* Colors for the players cashed and won */
+.bet-bar-cashed, .bet-bar-won {
+    background-color: #408609;
+}

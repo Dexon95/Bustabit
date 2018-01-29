@@ -1,0 +1,437 @@
+html, body {
+}
+
+body {
+    color: white;
+    background: #181a1e;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #1c1c1f;
+}
+::-webkit-scrollbar-track {
+    background-color: #181a1e;
+}
+::-webkit-scrollbar-thumb {
+    border: 1px solid #1c1c1f;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #2a2c36;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #1c1c1f;
+}
+
+
+::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: rgba(0, 0, 0, 0.7);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: rgba(0, 0, 0, 0.7);
+}
+
+:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+/* ==========================================================================
+   topBar.css
+   ========================================================================== */
+
+#top-bar {
+    background-color: #292d35;
+    border-bottom: none;
+}
+
+#top-bar .user-login .balance-bits span {
+    color: inherit;
+}
+
+
+/* ==========================================================================
+   game.css
+   ========================================================================== */
+
+#game-right-container {
+    border-color: #292d35;
+}
+
+
+/* ==========================================================================
+   controlsSelector.css
+   ========================================================================== */
+
+#controls-selector-container .button-holder {
+    background-color: #292d35;
+}
+
+#controls-selector-container .button-holder a {
+    color: #b0b3c1;
+}
+
+#controls-selector-container .controls-widget-container{
+    background-color: #181a1e;
+}
+
+#controls-selector-container .button-holder.tab-active {
+    background-color: #181a1e;
+}
+
+
+/* ==========================================================================
+   chartControls.css
+   ========================================================================== */
+
+#controls-container {
+    border-color: #292d35;
+}
+
+
+/* ==========================================================================
+   controls.css
+   ========================================================================== */
+
+#controls-inner-container .bet-input-group>input, #controls-inner-container .bet-input-group>span {
+    background-color: rgb(240, 238, 238);
+}
+
+#controls-inner-container .bet-input-group>input:disabled {
+	background-color: #BBBBBB;
+}
+
+
+/* ==========================================================================
+   chat.css
+   ========================================================================== */
+
+.msg-chat-message {
+    color: white;
+}
+
+.msg-chat-message a {
+    color: white;
+}
+
+.time-stamp {
+    opacity: 0.6;
+}
+
+.messages-container .loading-container, .messages-container .spinner-pre-loader {
+    background-image: url('../img/loading-black.gif');
+}
+
+
+/* ==========================================================================
+   tabsSelector.css
+   ========================================================================== */
+
+#tabs-inner-container .widget-container {
+    background-color: #181a1e;
+}
+
+#tabs-inner-container, #tabs-inner-container .log-chat-container {
+    border-color: #292d35;
+}
+
+#tabs-inner-container .tab-container li.tab.col-3, #tabs-inner-container .tab-container li.tab.col-4 {
+    background-color: #292d35;
+}
+
+#tabs-inner-container .tab-container li.tab.tab-active {
+    background-color: #181a1e;
+}
+
+#tabs-inner-container .tab-container li.tab {
+	background-color: #292d35;
+}
+
+#tabs-inner-container .tab-container li.tab a {
+    color: #b0b3c1;
+}
+
+#tabs-inner-container .tab-container .tab-settings {
+    background-color: #292d35;
+}
+
+#tabs-inner-container .tab-container .tab-settings.tab-active {
+    background-color: #181a1e;
+}
+
+
+/* ==========================================================================
+   settingsSelector.css
+   ========================================================================== */
+
+#settings-selector-container .tab-holder {
+    background-color: #292d35;
+}
+
+#settings-selector-container .tab-holder.tab-active {
+    background-color: #181a1e;
+}
+
+#settings-selector-container .tab-holder a {
+    color: #b0b3c1;
+}
+
+
+/* ==========================================================================
+   hotkeysSettings.css
+   ========================================================================== */
+
+#hotkeys-settings-container .hotkeys-list span:nth-of-type(odd) {
+    background-color: #202328;
+}
+
+
+/* ==========================================================================
+   displaySettings.css
+   ========================================================================== */
+
+#display-settings-container .option-row:nth-of-type(even) {
+    background-color: #202328;
+}
+
+#display-settings-container select {
+    background-color: #292d35;
+    border-color: #292d35;
+    color: white;
+}
+
+/* ==========================================================================
+   chatSettings.css
+   ========================================================================== */
+
+#chat-settings-container .option-row:nth-of-type(even) {
+    background-color: #202328;
+}
+
+#chat-settings-container select {
+    background-color: #292d35;
+    border-color: #292d35;
+    color: white;
+}
+
+
+/* ==========================================================================
+   strategy.css
+   ========================================================================== */
+
+#strategy-container .auto-bet-container {
+    color: white;
+}
+
+#strategy-container .strategy-start, #strategy-container .strategy-stop, #strategy-container .strategy-select {
+    background-color: #292d35;
+    border-color: #292d35;
+    color: white;
+}
+
+#strategy-container .strategy-start:disabled, #strategy-container .strategy-stop:disabled, #strategy-container .strategy-select:disabled {
+    color: #181a1e;
+}
+
+#strategy-container .auto-bet-container input[type="text"] {
+    color: white;
+}
+
+#strategy-container .auto-bet-container>div:nth-of-type(even) {
+    background-color: #202328;
+}
+
+#strategy-container .strategy-input {
+    background-color: transparent;
+    color: white;
+}
+
+#strategy-container .strategy-input:disabled {
+    color: grey;
+}
+
+
+/* ==========================================================================
+   players.css
+   ========================================================================== */
+
+#players-container .header-bg {
+    background-color: #292d35;
+}
+
+#players-container table .th-inner {
+    color: #b0b3c1;
+}
+
+
+/* ==========================================================================
+   gamesLog.css
+   ========================================================================== */
+
+#games-log-container table .th-inner {
+    color: #b0b3c1;
+}
+
+#games-log-container .games-log tr:nth-of-type(even) {
+    background-color: #1a1c21;
+}
+
+#games-log-container .games-log-hash {
+    color: white;
+}
+
+
+/* ==========================================================================
+   chart.css
+   ========================================================================== */
+
+#chart-inner-container .max-profit {
+    color: white;
+}
+
+
+/* ==========================================================================
+   Space animations
+   ========================================================================== */
+
+.space-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+.space-wrap.flying .space-container {
+    -webkit-animation: spacebg 1s infinite linear;
+    -moz-animation: spacebg 1s infinite linear;
+    -o-animation: spacebg 1s infinite linear;
+    -ms-animation: spacebg 1s infinite linear;
+    animation: spacebg 1s infinite linear;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    -ms-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.space-wrap.waiting .space-container-wrap {
+    -webkit-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -o-animation-play-state: running;
+    -ms-animation-play-state: running;
+    animation-play-state: running;
+}
+.space-gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: -webkit-linear-gradient(rgba(0,0,0,0.5), transparent);
+    background: -moz-linear-gradient(rgba(0,0,0,0.5), transparent);
+    background: -o-linear-gradient(rgba(0,0,0,0.5), transparent);
+    background: -ms-linear-gradient(rgba(0,0,0,0.5), transparent);
+    background: linear-gradient(rgba(0,0,0,0.5), transparent);
+    z-index: -1;
+}
+.space-container-wrap {
+    z-index: -2;
+    position: absolute;
+    top: -480px;
+    right: -320px;
+    left: 0;
+    bottom: 0;
+    -webkit-animation: spacebg 15s infinite linear;
+    -moz-animation: spacebg 15s infinite linear;
+    -o-animation: spacebg 15s infinite linear;
+    -ms-animation: spacebg 15s infinite linear;
+    animation: spacebg 15s infinite linear;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    -ms-animation-play-state: paused;
+    animation-play-state: paused;
+}
+/*.space-container {*/
+    /*z-index: -2;*/
+    /*position: absolute;*/
+    /*top: -480px;*/
+    /*right: -320px;*/
+    /*left: 0;*/
+    /*bottom: 0;*/
+    /*background: #21242a url("/img/stars.png");*/
+/*}*/
+
+
+
+/*@-moz-keyframes spacebg {*/
+    /*0% {*/
+        /*-webkit-transform: translate3D(0, 0, 0);*/
+        /*-moz-transform: translate3D(0, 0, 0);*/
+        /*-o-transform: translate3D(0, 0, 0);*/
+        /*-ms-transform: translate3D(0, 0, 0);*/
+        /*transform: translate3D(0, 0, 0);*/
+    /*}*/
+    /*100% {*/
+        /*-webkit-transform: translate3D(-320px, 480px, 0);*/
+        /*-moz-transform: translate3D(-320px, 480px, 0);*/
+        /*-o-transform: translate3D(-320px, 480px, 0);*/
+        /*-ms-transform: translate3D(-320px, 480px, 0);*/
+        /*transform: translate3D(-320px, 480px, 0);*/
+    /*}*/
+/*}*/
+/*@-webkit-keyframes spacebg {*/
+    /*0% {*/
+        /*-webkit-transform: translate3D(0, 0, 0);*/
+        /*-moz-transform: translate3D(0, 0, 0);*/
+        /*-o-transform: translate3D(0, 0, 0);*/
+        /*-ms-transform: translate3D(0, 0, 0);*/
+        /*transform: translate3D(0, 0, 0);*/
+    /*}*/
+    /*100% {*/
+        /*-webkit-transform: translate3D(-320px, 480px, 0);*/
+        /*-moz-transform: translate3D(-320px, 480px, 0);*/
+        /*-o-transform: translate3D(-320px, 480px, 0);*/
+        /*-ms-transform: translate3D(-320px, 480px, 0);*/
+        /*transform: translate3D(-320px, 480px, 0);*/
+    /*}*/
+/*}*/
+/*@-o-keyframes spacebg {*/
+    /*0% {*/
+        /*-webkit-transform: translate3D(0, 0, 0);*/
+        /*-moz-transform: translate3D(0, 0, 0);*/
+        /*-o-transform: translate3D(0, 0, 0);*/
+        /*-ms-transform: translate3D(0, 0, 0);*/
+        /*transform: translate3D(0, 0, 0);*/
+    /*}*/
+    /*100% {*/
+        /*-webkit-transform: translate3D(-320px, 480px, 0);*/
+        /*-moz-transform: translate3D(-320px, 480px, 0);*/
+        /*-o-transform: translate3D(-320px, 480px, 0);*/
+        /*-ms-transform: translate3D(-320px, 480px, 0);*/
+        /*transform: translate3D(-320px, 480px, 0);*/
+    /*}*/
+/*}*/
+/*@keyframes spacebg {*/
+    /*0% {*/
+        /*-webkit-transform: translate3D(0, 0, 0);*/
+        /*-moz-transform: translate3D(0, 0, 0);*/
+        /*-o-transform: translate3D(0, 0, 0);*/
+        /*-ms-transform: translate3D(0, 0, 0);*/
+        /*transform: translate3D(0, 0, 0);*/
+    /*}*/
+    /*100% {*/
+        /*-webkit-transform: translate3D(-320px, 480px, 0);*/
+        /*-moz-transform: translate3D(-320px, 480px, 0);*/
+        /*-o-transform: translate3D(-320px, 480px, 0);*/
+        /*-ms-transform: translate3D(-320px, 480px, 0);*/
+        /*transform: translate3D(-320px, 480px, 0);*/
+    /*}*/
+/*}*/

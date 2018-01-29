@@ -1,0 +1,15 @@
+{{##def.page_title = 'Play' #}}
+
+{{##def.content:
+    <div id="game">
+        Game Loading...
+    </div>
+    <!--Global vars-->
+    <script>
+        // TODO:
+        //  var OTT =  {{=it.ott}};
+    </script>
+    <!--RequireJs-->
+    <script data-main="/client_old/scripts/main" src="{{? it.buildConfig }}/old/scripts/{{=it.buildConfig['main-old.js']}}{{??}}/client_old/scripts/lib/require.js{{?}}"></script>
+#}}
+{{#def.include('./template/main_old')}}

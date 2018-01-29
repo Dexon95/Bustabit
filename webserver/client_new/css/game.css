@@ -1,0 +1,210 @@
+@import url("reset.css");
+@import url("general.css");
+@import url("topBar.css");
+@import url("chat.css");
+@import url("tabsSelector.css");
+@import url("gamesLog.css");
+@import url("controlsSelector.css");
+@import url("controls.css");
+@import url("strategy.css");
+@import url("betBar.css");
+@import url("chart.css");
+@import url("chartControls.css");
+@import url("players.css");
+@import url("settingsSelector.css");
+@import url("textDisplay.css");
+@import url("displaySettings.css");
+@import url("hotkeysSettings.css");
+@import url("chatSettings.css");
+@import url("loading.css");
+
+/**
+ * Header Background/ Widget Border Color: #292d35
+ * Widget Background Color: #181a1e
+ */
+
+html, body {
+    overflow: hidden;
+}
+
+
+/* ==========================================================================
+   Game container
+   ========================================================================== */
+
+#game-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+#game-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+#game-container {
+    width: 100%;
+    height: 100%;
+}
+
+/* Message bar */
+#game-message-container {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    left: 0;
+    /* line-height: 1.2rem; */
+    /* bottom: calc(100% - 1.2rem); */
+    background-color: green;
+    line-height: 1.2rem;
+}
+
+#game-message-container.hide {
+    display: none;
+}
+
+#game-message-container>span {
+    overflow-y: hidden;
+    padding-right: 20px;
+    display: block;
+}
+
+#game-message-container span>span, #game-message-container span>a {
+    color: white;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+#game-message-container div{
+
+}
+
+/* Playable container (The game) */
+#game-playable-container {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+#game-playable-container.show-message {
+    /* top: 1.2rem; */
+    top: 3.2rem;
+}
+
+#game-message-container .close-message{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+#game-message-container .close-message i {
+    color: white;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    padding-right: 0.2rem;
+}
+@media handheld, only screen and (max-width: 767px) {
+    #game-message-container .close-message i {
+        font-size: 1rem;
+    }
+}
+
+#game-message-container {
+    text-align: center;
+    z-index: 999;
+}
+
+#game-inner-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#game-left-container {
+    display: table;
+    height: 100%;
+    width: 65%;
+    position: relative;
+}
+
+#game-left-container.small-window {
+    width: 100%;
+}
+
+#game-right-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 65%;
+    right: 0;
+    border: 1px solid #ddd;
+    margin: 5px;
+}
+
+
+/* ==========================================================================
+   Tabs container
+   ========================================================================== */
+
+#tabs-container {
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    display: table-row;
+}
+
+
+/* ==========================================================================
+   Chart-Controls container
+   ========================================================================== */
+
+#chart-controls-container {
+    border-left: 1px solid #ddd;
+    min-height: 400px;
+    display: table-row;
+    height: 50%;
+}
+
+#chart-controls-row, #tabs-controls-row {
+    display: table-row;
+
+}
+
+#chart-controls-col, #tabs-controls-col {
+    display: table-cell;
+}
+
+#tabs-controls-col .cell-wrapper, #chart-controls-col .cell-wrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#chart-controls-col {
+    height: 45%;
+}
+
+#tabs-controls-col {
+    height: 55%;
+}
+
+/* Big Screens with small controls */
+@media handheld, only screen and (min-width: 767px) {
+    #chart-controls-col.small {
+        height: 10%;
+    
+}
+}
+/* Small Screens with small controls */
+@media handheld, only screen and (max-width: 767px) {
+    #chart-controls-col.small {
+        height: 20%;
+    }
+}

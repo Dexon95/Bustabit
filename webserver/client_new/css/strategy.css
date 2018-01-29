@@ -1,0 +1,163 @@
+#strategy-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#strategy-container .widget-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 1.2rem;
+    overflow-y: scroll;
+}
+
+#strategy-container .control-buttons {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+#strategy-container .buttons-container {
+    text-align: right;
+
+}
+
+#strategy-container .strategy-invalid-data {
+    font-size: .6em;
+    color: #B81717;
+    padding-left: .6em;
+    display: block;
+    text-align: right;
+}
+
+
+/* Auto Bet widget
+   ========================================================================== */
+
+#strategy-container .auto-bet-container {
+    padding-top: 0.2rem;
+    color: black;
+}
+
+#strategy-container .auto-bet-container>div:nth-of-type(even) {
+    background-color: whitesmoke;
+}
+
+#strategy-container .stra-base-bet {
+    /* background-color: #ffffff; */
+}
+
+#strategy-container .stra-cash-out-at {
+    /* background-color: whitesmoke; */
+}
+
+#strategy-container .stra-base-bet, #strategy-container .stra-cash-out-at, #strategy-container .stra-max-bet-stop {
+    line-height: 1.7rem;
+    padding-left: 1em;
+}
+
+#strategy-container .stra-on-loss {
+    padding-left: 1em;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    /* background-color: whitesmoke; */
+}
+
+#strategy-container .stra-on-loss:first-child {
+    line-height: 1em;
+}
+
+#strategy-container .stra-on-win {
+    padding-left: 1em;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    /* background-color: #ffffff; */
+}
+
+#strategy-container .stra-on-win:first-child {
+    line-height: 1em;
+}
+
+#strategy-container .stra-max-bet-stop {
+    /* background-color: #ffffff; */
+}
+
+#strategy-container .stra-on-loss-return-to-base-radio, #strategy-container .stra-on-loss-increase-bet-by, #strategy-container .stra-on-win-return-to-base-radio, #strategy-container .stra-on-win-increase_bet_by {
+    margin-left: 1.2em;
+}
+
+
+/* Strategy Script
+   ========================================================================== */
+
+#strategy-container .strategy-input {
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgba(94, 94, 94, 0.2);
+    display: block;
+    resize: none;
+}
+
+#strategy-container .strategy-start, #strategy-container .strategy-stop, #strategy-container .strategy-select {
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    color: black;
+    border-radius: 0;
+    display: inline-block;
+    height: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+#strategy-container .strategy-start:disabled, #strategy-container .strategy-stop:disabled, #strategy-container .strategy-select:disabled {
+    color: grey;
+}
+
+#strategy-container .strategy-start {
+    margin-right: 0.2rem;
+}
+
+#strategy-container .strategy-stop {
+    margin-right: 0.2rem;
+}
+
+#strategy-container .strategy-select {
+    margin-right: 0.2rem;
+}
+
+#strategy-container .bet-title {
+    font-weight: 500;
+}
+
+#strategy-container .auto-bet-container input[type="text"] {
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    padding: 0;
+    resize: none;
+    border-bottom: 1px solid #bdbdbd;
+    text-align: center;
+    width: 5em;
+    font-size: .8em;
+    font-weight: 500;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+{{##def.page_title = 'Request Free Bits' #}}
+
+{{##def.content:
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script>
+	function sub() {
+		document.getElementById('faucetForm').submit();
+	}
+
+</script>
+<div class="content row panel radius">
+
+    <div class="settings">
+        <div class="small-2 columns">
+            <ul class="menu">
+                <li>
+                    <a class="active" href="/account">Account</a>
+                </li>
+                <li>
+                    <a href="/deposit">Deposit</a>
+                </li>
+                <li>
+                    <a href="/withdraw">Withdraw</a>
+                </li>
+
+                <li>
+                    <a href="/support">Support</a>
+                </li>
+                <li>
+                    <a onclick="logout();">
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="small-10 columns sets-content">
+            <h5>Request Free Bits</h5>
+                {{?typeof it.user.eligible !== 'number'}}
+                    <p class="small ">**Every hour you are able to request 2 free bits, just claim them!</p>
+                    <form class="giveaway-form" action="/request" method="post" id="faucetForm">
+                        <div class="g-recaptcha" data-sitekey="{{=it.recaptchaKey}}" data-callback="sub"></div>
+                    </form>
+                {{??}}
+                    <h4>You will be eligible for a free 2 bits in {{=it.user.eligible}} minutes</h4>
+                {{?}}
+        </div>
+    </div>
+</div>
+#}}
+
+{{#def.include('./template/main_old')}}

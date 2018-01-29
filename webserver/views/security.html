@@ -1,0 +1,132 @@
+{{##def.page_title = 'Security Settings' #}}
+{{##def.content:
+<script type="text/javascript">
+    window.onload = function () {
+        if (document.getElementById('confirmation') !== null) {
+            document.getElementById('confirmation').onchange = validatePassword;
+            document.getElementById('password').onchange = validatePassword;
+        }
+    };
+    function validatePassword() {
+        var password = document.getElementById('password').value;
+        var confirm = document.getElementById('confirmation').value;
+        if (password != confirm) {
+            document.getElementById('confirmation').setCustomValidity("Confirmation and password should be the same");
+        } else document.getElementById("confirmation").setCustomValidity('');
+    }
+    function logout() {
+        if (document.getElementById('logout') ) {
+            if (confirm("Are you sure you want to log out?")) {
+                document.getElementById("logout").submit();
+            }
+        }
+    }
+</script>
+<form action="/logout" method="post" id='logout'></form>
+<div class="content row panel radius">
+
+    <div class="settings">
+        <div class="small-2 columns">
+            <ul class="menu">
+                <li>
+                    <a href="/account">Account</a>
+                </li>
+                <li class="active">
+                   Security
+                </li>
+                <li>
+                    <a href="/deposit">Deposit</a>
+                </li>
+                <li>
+                    <a href="/withdraw">Withdraw</a>
+                </li>
+
+                <li>
+                    <a href="/support">Support</a>
+                </li>
+                <li>
+                    <a onclick="logout();">
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="small-10 columns sets-content">
+            <h5>Update Your Password</h5>
+            <form action="reset-password" method="post" >
+                <label for="old_password">Old Password</label>
+                <input name="old_password" type="password" id="old_password" autocomplete="off" required/>
+                {{?it.user.mfa_secret}}
+                    <label>2FA Code
+                        <input name="otp" type="text" pattern="[0-9]{6}" required />
+                    </label>
+                {{?}}
+                <label for="password">New Password <span class="small">At least 7 characters</span></label>
+                <input name="password" type="password" id="password" pattern=".{7,50}" required/>
+                <label for="confirmation">Confirm Password</label>
+                <input name="confirmation" type="password" id="confirmation" pattern=".{7,50}" required/>
+                <input type="submit" class="border-button blue right" value="Change"/>
+            </form>
+            <br>
+            <br>
+            <hr>
+
+            <h5>Edit Email Address</h5>
+            <p class="small">In case you've forgotten your password we can send you a link to reset it, otherwise you don't have other way to recover your account.</p>
+
+            <form action="/edit-email" method="post">
+                <label for="email">Recovery Email</label>
+
+                <!-- fake fields are a workaround for chrome autofill getting the wrong fields -->
+                <input style="display:none" type="text" name="fakeusernameremembered"/>
+                <input style="display:none" type="password" name="fakepasswordremembered"/>
+
+                <input type="email" id="email" name="email" value="{{?it.user.email}}{{=it.user.email}}{{??}}{{?}}" />
+                <label for="password">Confirmation Password</label>
+                <input name="password" type="password" id="check_password" autocomplete="off" pattern=".{7,50}" required/>
+                {{?it.user.mfa_secret}}
+                    <label>2FA Code
+                        <input name="otp" type="text" autocomplete="off" pattern="[0-9]{6}" required />
+                    </label>
+                {{?}}
+                <input class="border-button right blue" type="submit" value="save"/>
+            </form>
+
+            <br>
+            <br>
+            <hr>
+            {{?it.user.mfa_secret}}
+                <h5>Disable Two-Factor Authentication</h5>
+                <p class="small">To disable two-factor authentication, please enter your one-time password.</p>
+                <form action="/disable-2fa" method="post">
+                    <label>2FA Code
+                        <input name="otp" type="text" pattern="[0-9]{6}" required />
+                    </label>
+                    <input class="border-button right blue" type="submit" value="Disable" />
+                </form>
+            {{??}}
+                <h5>Enable Two-Factor Authentication</h5>
+                <p class="small">
+                    To enable two-factor authentication, scan the following QR code or enter the secret manually, then enter your one-time password to confirm.
+                    <br>
+                    <b>If you lose your two-factor authentication codes you may be permanently locked out of your account. Ensure you backup
+                        your 2FA application, or save this QR code or secret. Do not enable 2FA unless you are sure you have a safe copy of this information</b>
+                </p>
+                <div class="column medium-6">
+                    {{=it.user.qr_svg}}
+                    <small>Secret: {{=it.user.mfa_potential_secret}}</small>
+                </div>
+                <form class="column medium-6" action="/enable-2fa" method="post">
+                    <label>2FA Code
+                        <input type="hidden" name="mfa_potential_secret" value="{{=it.user.mfa_potential_secret}}" />
+                        <input type="hidden" name="sig" value="{{=it.user.sig}}" />
+                        <input name="otp" type="text" pattern="[0-9]{6}" required />
+                    </label>
+                    <input class="border-button right blue" type="submit" value="Enable" />
+                </form>
+            {{?}}
+        </div>
+    </div>
+    </div>
+#}}
+{{#def.include('./template/main_old')}}

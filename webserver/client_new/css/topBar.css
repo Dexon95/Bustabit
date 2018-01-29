@@ -1,0 +1,139 @@
+#top-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 2rem;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    font-family: "Verlag A", "Verlag B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#top-bar .title {
+    float: left;
+}
+
+#top-bar .title h1 {
+    color: #e58929;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 1rem;
+    font-family: "Courier New";
+}
+
+#top-bar .user-login {
+    float: right;
+    line-height: 40px;
+}
+
+
+/** Toggle design **/
+
+#top-bar .toggle-view {
+    line-height: 2rem;
+    float: right;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+@media handheld, only screen and (max-width: 767px) {
+    #top-bar .toggle-view {
+        margin-right: 0.5rem;
+    }
+}
+
+#top-bar .toggle-view a {
+    border: 2px solid grey;
+    padding: 2px;
+}
+@media handheld, only screen and (max-width: 767px) {
+    
+    #top-bar .toggle-view a {
+        display: none;
+    }
+
+    #top-bar .toggle-view:after {
+        content: '\00a0';
+        line-height: 2rem;
+        width: 1rem;
+        padding: 0 0.5rem;
+        height: 1rem;
+        border: 2px solid grey;
+        cursor: pointer;
+	}
+
+    #top-bar .toggle-view.white:after {
+        background-color: white;
+    }
+    
+    #top-bar .toggle-view.black:after {
+        background-color: black;
+    }
+}
+
+
+/** Full Screen **/
+
+#top-bar .full-screen {
+	float: right;
+    line-height: 2rem;
+    padding-right: 1rem;
+}
+
+#top-bar .full-screen i{
+	border: 2px solid grey;
+    padding: 4px;
+    cursor: pointer;
+}
+
+
+/** User logged **/
+
+#top-bar .user-login .balance-bits {
+    display: inline-block;
+    padding-right: 0.5rem;
+}
+
+#top-bar .user-login .balance-bits span{
+    line-height: 2rem;
+    color: black;
+}
+
+#top-bar .user-login .username {
+    display: inline-block;
+    padding-right: 2rem;
+}
+@media handheld, only screen and (max-width: 767px) {
+    #top-bar .user-login .username {
+        padding-right: 0.5rem;
+    }
+}
+
+#top-bar .user-login .username a {
+    line-height: 2rem;
+    font-weight: bold;
+}
+
+
+/** Not logged user **/
+
+#top-bar .user-login .register {
+    display: inline-block;
+
+    padding-right: 1rem;
+}
+
+#top-bar .user-login .register a {
+
+}
+
+#top-bar .user-login .login {
+    display: inline-block;
+
+    padding-right: 2rem;
+}
+
+#top-bar .user-login .login a {
+    line-height: 2rem;
+
+}

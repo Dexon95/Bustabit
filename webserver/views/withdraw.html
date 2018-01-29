@@ -1,0 +1,88 @@
+{{##def.page_title = 'Withdraw' #}}
+
+{{##def.content:
+<script type="text/javascript">
+    function logout() {
+        if (document.getElementById('logout') ) {
+            if (confirm("Are you sure you want to log out?")) {
+                document.getElementById("logout").submit();
+            }
+        }
+    }
+</script>
+<form action="/logout" method="post" id='logout'></form>
+<div class="content row panel radius">
+    <div class="settings">
+        <div class="small-2 columns">
+            <ul class="menu">
+                <li>
+                    <a href="/account">Account</a>
+                </li>
+                <li>
+                    <a href="/security">Security</a>
+                </li>
+                <li>
+                    <a href="/deposit">Deposit</a>
+                </li>
+                <li class="active">
+                    Withdraw
+                </li>
+
+                <li>
+                    <a href="/support">Support</a>
+                </li>
+                <li>
+                    <a onclick="logout();">
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="small-10 columns sets-content">
+            <a class="border-button right green" href="/withdraw/request">Request Withdraw</a>
+            <h5 >Withdraw History</h5>
+            <hr>
+            {{?it.user.withdrawals.length > 0}}
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Bits</td>
+                            <td>Destination Address</td>
+                            <td>Status</td>
+                            <td class="show-for-large-up">Created</td>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{~it.user.withdrawals :withdrawal:index}}
+                            <tr>
+                                <td>{{#def.format: {n: withdrawal.amount, decimals: 2 } }}</td>
+                                <td>
+                                    <span class="visible-for-small-only">{{=withdrawal.shortDestination}}...</span>
+                                    <span class="show-for-medium-up">{{=withdrawal.destination}} </span>
+
+                                </td>
+                                <td>
+                                    {{?withdrawal.status}}
+                                         <a href="https://blockchain.info/tx/{{=withdrawal.status}}" target="_blank">Transferred</a>
+                                    {{??}}
+                                        in progress
+                                    {{?}}
+                                </td>
+                                <td class="show-for-large-up">{{=withdrawal.created}}</td>
+                            </tr>
+                        {{~}}
+                    </tbody>
+                </table>
+            {{??}}
+                <br>
+                <br>
+                <br>
+                <p>You have no withdrawals in your account.</p>
+            {{?}}
+        </div>
+    </div>
+</div>
+
+#}}
+{{#def.include('./template/main_old')}}

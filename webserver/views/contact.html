@@ -1,0 +1,18 @@
+{{##def.page_title = 'Contact Us' #}}
+{{##def.content:
+<div class="row faq panel radius">
+    <h5>Contact Us</h5>
+    <hr>
+    <div class="row contact">
+        <form action="/contact" id="contact" method="post">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required=""/>
+            <label for="message">Message</label>
+            <textarea rows="10" id="message" name="message" required> </textarea>
+            <input type="submit" class="border-button right blue" value="Send!"/>
+        </form>
+
+    </div>
+</div>
+#}}
+{{#def.include('./template/main_old')}}

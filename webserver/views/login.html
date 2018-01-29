@@ -1,0 +1,53 @@
+{{##def.page_title = 'Login' #}}
+
+{{##def.content:
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script>
+	var submitEnabled = false;
+  function enableSubmit() {
+	  submitEnabled = true;
+    var s = document.getElementById('loginSubmit');
+    s.style.display = 'block';
+  }
+</script>
+
+
+<div class="login">
+    <form action="/login" method="post" onsubmit="return submitEnabled;">
+        <div class="row">
+            <div class="large-12 columns">
+                <label>Username
+                    <input type="text" name="username" required/>
+                </label>
+            </div>
+        </div>
+         <div class="row">
+            <div class="large-12 columns">
+                <label>Password
+                    <input type="password" name="password" required />
+                </label>
+            </div>
+         </div>
+        <div class="row">
+            <div class="large-12 columns">
+                <label>
+                    Remember me
+                    <input type="checkbox" name="remember">
+                </label>
+            </div>
+        </div>
+         <div class="row">
+            <div class="g-recaptcha" data-sitekey="{{=it.recaptchaKey}}" data-callback="enableSubmit"></div>
+         </div>
+         <div class="row">
+            <div class="large-12 columns">
+                <a class="small" href="/forgot-password">Forgot your password?</a>
+                <input id="loginSubmit" style="display: none" class="border-button right blue" value="Login" type="submit" />
+            </div>
+        </div>
+
+    </form>
+</div>
+
+#}}
+{{#def.include('./template/main_old')}}

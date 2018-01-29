@@ -1,0 +1,133 @@
+/*
+ green: 89B151
+ yellow: FDD262
+ beige: C7B19C
+ gray: C3CED0
+*/
+@font-face {
+    font-family: tale;
+    src: url('fonts/tale.otf')
+}
+
+@font-face {
+    font-family: rbn;
+    src: url('fonts/RBN.otf')
+}
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+body {
+    font-size: 20px ;
+    letter-spacing: 1px;
+}
+
+#slider {
+    margin-top: 50px;
+    text-align: center;
+}
+.content{
+    min-height: 100%;
+    margin-bottom: -100px;
+}
+.content:after {
+    content: "";
+    display: block;
+}
+footer{
+    height: 100px;
+}
+
+.tihidRibbon7{
+    position: relative ;
+    margin-top: 10px;
+    font-size: 20px !important;
+    font-family: tale;
+    background: #FDD262;
+    text-align: center;
+    padding: 16px 90px;
+}
+
+.tihidStrong {
+    color: #000;
+}
+p {
+    font-size: 18px;
+}
+.play {
+    float: right;
+}
+.content {
+    margin-top: 30px;
+}
+#error, #fail{
+    color: red;
+}
+.tihidRibbon7:before, .tihidRibbon7:after{
+    content: "";
+    position:absolute;
+    display: block;
+    bottom:-16px;
+    border: 24px solid rgba(77, 81, 23, 0.54);
+    z-index:-1;
+    line-height:0;
+}
+
+.tihidRibbon7:before{
+    left:-32px;
+    border-right-width:24px;
+    border-left-color:#ffffff;
+}
+
+.tihidRibbon7:after{
+    right:-32px;
+    border-left-width:24px;
+    border-right-color:#ffffff;
+}
+
+.tihidRibbon7 .tihidStrong:before, .tihidRibbon7 .tihidStrong:after{
+    content: "";
+    position: absolute;
+    display: block;
+    line-height:0;
+}
+
+.tihidRibbon7 .tihidStrong:before{
+    left:0;
+    bottom: -16px;
+    border-top:16px solid #1c2713;
+    border-left:16px solid transparent;
+}
+
+.tihidRibbon7 .tihidStrong:after{
+    right:0;
+    bottom: -16px;
+    border-top:16px solid #1c2713;
+    border-right:16px solid transparent;
+}
+.tihidRibbon7 a, .menu a{
+    color: #000
+}
+
+.menu .active {
+
+}
+
+.menu a:hover, .menu .active {
+    color: #9EA081;
+}
+
+.title-ribbon {
+    position: absolute;
+    margin-left: 88px;
+}
+
+.title {
+    text-align: center;
+}
+
+p{
+    font-size: 16px;
+}

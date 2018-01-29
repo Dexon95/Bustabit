@@ -1,0 +1,70 @@
+#controls-selector-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+#controls-selector-container .buttons-container {
+    width: 100%;
+    display: table;
+}
+/* Hide controls selector on small screen */
+@media handheld, only screen and (max-width: 767px) {
+    #controls-selector-container .buttons-container {
+        display: none;
+    }
+}
+/* Hide controls selector when small controls */
+#controls-selector-container .buttons-container.small {
+    display: none;
+}
+
+#controls-selector-container .button-holder {
+    display: table-cell;
+    width: 50%;
+    text-align: center;
+    font-size: 0.8rem;
+    cursor: pointer;
+    background-color: #ddd;
+}
+
+#controls-selector-container .button-holder:hover a{
+    color: rgba(228, 121, 3, 1);
+}
+
+#controls-selector-container .button-holder.tab-active {
+    background-color: white;
+}
+
+#controls-selector-container .button-holder.tab-active a{
+    color: rgba(228, 121, 3, 1);
+}
+
+#controls-selector-container .button-holder a{
+    line-height: 1.5rem;
+    color: black;
+    cursor: pointer;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+#controls-selector-container .controls-widget-container {
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: transparent;
+}
+
+@media handheld, only screen and (max-width: 767px) {
+    #controls-selector-container .controls-widget-container {
+        top: 0;
+    }
+}
+#controls-selector-container .controls-widget-container.small {
+    top: 0;
+}

@@ -1,0 +1,430 @@
+/** ================ Default look ================ **/
+
+
+#controls-inner-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#controls-inner-container .control-inputs-container {
+}
+
+
+#controls-inner-container .input-control {
+    width: 100%;
+}
+
+#controls-inner-container .button-container {
+    height: calc(100% - 7.5rem);
+    padding: 1rem 0.5rem 0 0.5rem;
+}
+
+#controls-inner-container .bet-container, #controls-inner-container  .autocash-container {
+}
+
+#controls-inner-container .bet-container {
+    padding: 1rem 0.5rem 0 0.5rem;
+}
+
+#controls-inner-container .autocash-container {
+    padding: 2rem 0.5rem 0 0.5rem;
+}
+
+#controls-inner-container  .bet-container > input, #controls-inner-container  .bet-container > span, #controls-inner-container .autocash-container > input, #controls-inner-container .autocash-container > span {
+}
+
+
+/** BET/AUTOCASH **/
+
+#controls-inner-container .bet-input-group {
+    display: table;
+    position: relative;
+}
+
+#controls-inner-container .bet-input-group>input {
+    line-height: 2em;
+    height: 2em;
+    width: 100%;
+    outline: none;
+    padding-left: 0.5rem;
+    margin: 0;
+}
+
+#controls-inner-container .bet-input-group>input:disabled {
+	background-color: #EBEBEB;
+}
+
+#controls-inner-container .bet-input-group>input, #controls-inner-container .bet-input-group>span {
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    color: #181a1e;
+}
+
+#controls-inner-container .bet-input-group>span:first-child  {
+    position: absolute;
+    font-weight: bold;
+    top: -1rem;
+    border: 0;
+    background-color: transparent;
+    border-color: transparent;
+    color: #b0b3c1;
+}
+
+#controls-inner-container .bet-input-group>span:last-child  {
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    padding: 0 0.5rem;
+
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+
+    height: 1rem;
+    display: table-cell;
+}
+
+#controls-inner-container .bet-input-group.error input {
+    border: 1px solid;
+    border-color: #a94442;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+#controls-inner-container .bet-input-group.error input:focus {
+    border-color: #843534;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483;
+    outline: none;
+}
+
+#controls-inner-container .bet-input-group.error span {
+    border: 1px solid;
+    border-color: #a94442;
+    background-color: #a94442;
+    color: white;
+}
+
+#controls-inner-container .bet-input-group.error>span:first-child {
+    color: #a94442;
+    border: none;
+    background-color: transparent;
+}
+
+
+/** Button **/
+
+#controls-inner-container .bet-button-container {
+    height: 100%;
+    box-sizing: content-box;
+}
+
+#controls-inner-container .bet-button {
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: calc(100% - 10px);
+    text-align: center;
+    color: white;
+    background-color: rgba(243,150,47,1);
+    position: relative;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 2rem;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-box-shadow: 0 6px 0 rgb(255,82,5),0px 9px 25px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 6px 0 rgb(255,82,5),0px 9px 25px rgba(0,0,0,.1);
+    box-shadow: 0px 6px 0px rgb(255,81,20),0px 9px 25px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+    border: 0;
+    outline: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+#controls-inner-container .bet-button > span {
+     white-space: nowrap;
+}
+
+#controls-inner-container .btn-content {
+    white-space: nowrap;
+}
+
+#controls-inner-container .btn-content .cashout-cont {
+    display: block;
+    line-height: 2rem;
+}
+
+#controls-inner-container .btn-content .cashout-amount-cont {
+    display: block;
+    font-size: 1.5rem;
+}
+
+#controls-inner-container .bet-button:active {
+    -webkit-box-shadow: 0px 3px 0px rgb(186,60,18),0px 3px 6px rgba(0,0,0,.2);
+    -moz-box-shadow: 0px 3px 0px rgb(186,60,18),0px 3px 6px rgba(0,0,0,.2);
+    box-shadow: 0px 3px 0px rgb(186,60,18),0px 3px 6px rgba(0,0,0,0.2);
+    position: relative;
+    top: 6px;
+}
+
+#controls-inner-container .bet-button.cashout {
+    background-color: #ff8100;
+}
+
+#controls-inner-container .bet-button.disable, #controls-inner-container .bet-button.invalid-bet {
+    background-color: rgba(168, 168, 168, 1);
+    -webkit-box-shadow: 0px 3px 0px rgb(186, 60, 18), 0px 3px 6px rgba(0,0,0,.2);
+    -moz-box-shadow: 0px 3px 0px rgb(186, 60, 18), 0px 3px 6px rgba(0,0,0,.2);
+    box-shadow: 0px 3px 0px rgb(102, 102, 102), 0px 3px 6px rgba(0,0,0,0.2);
+    cursor: default;
+}
+
+#controls-inner-container .bet-button.disable.cancel {
+    cursor: pointer;
+}
+
+#controls-inner-container .bet-button a.cancel {
+    color: #880000;
+    font-size: 0.8rem;
+}
+
+
+/* Login Button */
+
+#controls-inner-container .login-container {
+}
+
+#controls-inner-container .login-button-container {
+    margin: 0.8rem;
+    margin-top: 2rem;
+}
+
+#controls-inner-container .register-container {
+    text-align: right;
+    padding-right: 0.8rem;
+}
+
+#controls-inner-container .register-container .register{
+}
+
+
+/** ================ Small Screen look ================ **/
+
+@media handheld, only screen and (max-width: 767px) {
+
+    #controls-inner-container .control-inputs-container {
+        width: 70%;
+        padding: 0;
+        float: left;
+        display: block;
+    }
+
+    #controls-inner-container .input-control {
+        height: initial;
+    }
+
+    #controls-inner-container .button-container {
+        float: left;
+        width: 30%;
+        height: 100%;
+    
+        padding: 0 0.5rem 0 0;
+}
+
+    #controls-inner-container .bet-container {
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    #controls-inner-container .autocash-container {
+        padding-top: 0;
+        margin-top: 0.3rem;
+    }
+
+    /** BET/AUTOCASH **/
+
+    #controls-inner-container .bet-input-group>input, #controls-inner-container .bet-input-group>span {
+        font-size: 0.8rem;
+    }
+
+    #controls-inner-container .bet-input-group>span:first-child {
+        color: #555;
+        text-align: center;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        font-size: 0.8rem;
+        padding: 0 0.2rem;
+        border-right: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        width: 1%;
+        white-space: nowrap;
+        vertical-align: middle;
+        height: 0.8rem;
+        display: table-cell;
+        position: static;
+        top: initial;
+    }
+
+    #controls-inner-container .bet-input-group.error>span:first-child {
+        background-color: #a94442;
+        color: white;
+    }
+
+    /** Button **/
+
+    #controls-inner-container .bet-button-container {
+        padding: 0 0.1rem;
+        height: 100%;
+    }
+
+    #controls-inner-container .bet-button {
+        top: inherit;
+        font-size: 1.2rem;
+        height: calc(100% - 10px - 0.3rem);
+}
+
+    #controls-inner-container .btn-content .cashout-cont {
+        display: inline;
+        line-height: inherit;
+        padding-top: 0;
+    }
+
+    #controls-inner-container .btn-content .cashout-amount-cont {
+        display: none;
+    }
+
+    #controls-inner-container .bet-button.cashout {
+        font-size: 1rem;
+    }
+
+    #controls-inner-container .bet-button.disable, #controls-inner-container .bet-button.invalid-bet {
+        font-size: 1rem;
+    }
+
+    /* Login Button */
+
+    #controls-inner-container .login-button-container {
+        margin: 0.4rem 0 0 0.5rem;
+    }
+}
+
+/** ================ Big screen and small controls look ================ **/
+
+@media screen and (min-width: 767px) {
+
+    #controls-inner-container.small {
+        display: block;
+    }
+
+    #controls-inner-container.small .control-inputs-container {
+        width: 70%;
+        float: left;
+        padding: 0;
+    }
+
+    #controls-inner-container.small .input-control {
+        height: initial;
+    }
+
+    #controls-inner-container.small .button-container {
+        float: left;
+        width: 30%;
+        height: 100%;
+    
+        padding: 0;
+}
+
+    #controls-inner-container.small .bet-container {
+        padding: 0.5rem 0.1rem 0 0.3rem;
+    }
+
+    #controls-inner-container.small .autocash-container {
+        padding: 1rem 0.1rem 0 0.3rem;
+    }
+
+    /** BET/AUTOCASH **/
+
+    #controls-inner-container.small .bet-input-group>input, #controls-inner-container .bet-input-group>span {
+        font-size: 0.8rem;
+    }
+
+    #controls-inner-container.small .bet-input-group>input {
+        line-height: 2rem;
+        height: 2rem;
+    }
+
+    #controls-inner-container .bet-input-group>span {
+        height: 1rem;
+    }
+
+    #controls-inner-container.small .bet-input-group>span:first-child {
+        color: #555;
+        text-align: center;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        font-size: 0.8rem;
+        padding: 0 0.3rem;
+        border-right: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        width: 1%;
+        white-space: nowrap;
+        vertical-align: middle;
+        display: table-cell;
+        position: static;
+        top: initial;
+        height: 2rem;
+    }
+
+    #controls-inner-container.small .bet-input-group.error>span:first-child {
+        background-color: #a94442;
+        color: white;
+    }
+
+    /** Button **/
+
+    #controls-inner-container.small .bet-button-container {
+        padding: 0;
+    }
+
+    #controls-inner-container.small .bet-button {
+        font-size: 1.2rem;
+        margin: 0.5rem 0.5rem 0 0.5rem;
+        height: calc(100% - 10px - 0.9rem);
+        width: calc(100% - 1rem);
+    }
+
+    #controls-inner-container.small .btn-content .cashout-cont {
+        display: inline;
+        line-height: inherit;
+        padding-top: 0;
+    }
+
+    #controls-inner-container.small .btn-content .cashout-amount-cont {
+        display: none;
+    }
+
+    #controls-inner-container.small .bet-button.cashout {
+        font-size: 1rem;
+    }
+
+    /* Login Button */
+
+    #controls-inner-container.small .login-button-container {
+        margin: 0.4rem 0 0 0.5rem;
+    }
+}

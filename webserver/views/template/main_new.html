@@ -1,0 +1,51 @@
+{{##def.format:param:{{=(param.n/100).toFixed(param.decimals).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")}}#}}
+
+<!DOCTYPE html>
+<html>
+{{#def.include('head_new')}}
+<body>
+
+<div class="wrap">
+    {{#def.include('header_new')}}
+
+    {{? it.warning }}
+    <div class="warning-wrap">{{!it.warning}}</div>
+    {{?? it.success}}
+    <div class="success-wrap">{{!it.success}}</div>
+    {{??it.user }}
+
+    {{?it.user.error}}
+
+    <div class="warning-wrap">
+        {{!it.user.error}}
+    </div>
+    {{??it.user.advice == 'new'}}
+    <div class="success-wrap">
+        Welcome to bustabit.com, to start you have 2 free bits, bits
+        <a href="/request">you can request them here</a> or you can just watch the current games... have fun :D
+
+    </div>
+    {{??it.user.advice == 'received'}}
+    <div class="success-wrap">
+        Congratulations you have been credited 2 free bits. Have fun!
+    </div>
+    {{?? it.user.advice}}
+    <div class="success-wrap">
+        {{!it.user.advice}}
+    </div>
+    {{??it.user && it.user.balance_satoshis < 100 }}
+    {{?it.user.eligible == true}}
+    <div class="success-wrap"><a href="/request">Collect your free bits!</a></div>
+    {{?}}
+    {{?}}
+
+    {{?}}
+
+    <div class="page-content">
+        {{#def.content || ""}}
+    </div>
+
+</div>
+
+</body>
+</html>

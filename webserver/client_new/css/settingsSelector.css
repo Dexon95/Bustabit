@@ -1,0 +1,46 @@
+#settings-selector-container {
+    width: 100%;
+    height: 100%;
+}
+
+#settings-selector-container .tabs-container {
+    width: 100%;
+    text-align: right;
+}
+
+#settings-selector-container .tab-holder {
+    display: inline-block;
+    width: auto;
+    padding: 0 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    cursor: pointer;
+    background-color: #ddd;
+    line-height: 1.5rem;
+}
+
+#settings-selector-container .tab-holder.tab-active {
+     background: white;
+}
+
+#settings-selector-container .tab-holder.tab-active a {
+    color: rgba(228, 121, 3, 1);
+}
+
+#settings-selector-container .tab-holder a {
+    color: black;
+    cursor: pointer;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+#settings-selector-container .tab-holder:hover a {
+    color: rgba(228, 121, 3, 1);
+}
+
+#settings-selector-container  .settings-widget-container {
+    width: 100%;
+    height: 100%;
+    padding-left: 0.2rem;
+}

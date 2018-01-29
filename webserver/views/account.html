@@ -1,0 +1,94 @@
+{{##def.page_title = 'Your account' #}}
+{{##def.content:
+<script type="text/javascript">
+    function logout() {
+        if (document.getElementById('logout') ) {
+            if (confirm("Are you sure you want to log out?")) {
+                document.getElementById("logout").submit();
+            }
+        }
+    }
+</script>
+<form action="/logout" method="post" id='logout'></form>
+<div class="content row panel radius">
+
+    <div class="settings">
+        <div class="small-2 columns">
+            <ul class="menu">
+                <li class="active">
+                   Account
+                </li>
+                <li>
+                    <a href="/security">Security</a>
+                </li>
+                <li>
+                    <a href="/deposit">Deposit</a>
+                </li>
+                <li>
+                    <a href="/withdraw">Withdraw</a>
+                </li>
+
+                <li>
+                    <a href="/support">Support</a>
+                </li>
+                <li>
+                    <a onclick="logout();">
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="small-10 columns sets-content">
+            <h5>Account</h5>
+            <hr>
+            <p class="account">
+                <b>Deposit Address:</b>
+                <input type="text" value="{{=it.user.deposit_address}}" readonly>
+                <a href="bitcoin:{{=it.user.deposit_address}}?message=deposit">Bitcoin link</a>
+            </p>
+            <div class="row">
+                <div class="large-5 columns">
+                    <img class="show-for-medium-up qr" src="https://blockchain.info/qr?data={{=it.user.deposit_address}}&size=150" alt=""/>
+                </div>
+                <div class="large-6 columns">
+                    Transfer bitcoins to this address to have your account credited. Accounts are only credited after <b>one bitcoin confirmation</b>
+                    which depending on external factors can take a while. You can check
+                     <a href="https://blockchain.info/address/{{=it.user.deposit_address}}">blockchain.info</a> to see if your transactions have confirmed yet.
+                    <strong><a href="/faq#deposit"> <small>more?</small></a></strong>
+                </div>
+            </div>
+            <br>
+            <a class="border-button blue right"href="/user/{{=it.user.username}}">Public Profile</a>
+            <h5>Account Information</h5>
+            <div id="statistics" class="row">
+                <div class="columns data large-3">
+                    <p><b>Deposits </b></p>
+                    <h5>{{#def.format:{n: it.user.deposits, decimals:2} }} bits</h5>
+                </div>
+                <div class="columns data large-3">
+                    <p><b>Withdrawals </b></p>
+                    <h5>{{#def.format:{n: it.user.withdrawals, decimals:2} }} bits</h5>
+                </div>
+                <div class="columns data large-3">
+                    <p><b>Free Bits Collected </b></p>
+                    <h5>{{#def.format:{n: it.user.giveaways, decimals:2} }}</h5>
+                </div>
+                <div class="columns data large-3">
+                    <p><b>Net Profit</b></p>
+                    <h5>{{#def.format:{n: it.user.net_profit, decimals:2} }} Bits</h5>
+                </div>
+            </div>
+
+            <br>
+            {{?typeof it.user.eligible !== 'number' }}
+                {{?it.user.balance_satoshis > 100}}
+                    <div class="success bits">You are eligible for a free 2 bits <a href="/request">CLICK HERE TO REQUEST THEM!</a></div>
+                {{?}}
+            {{??}}
+                <div class="success bits">You'll be eligible for 2 free bits in {{=it.user.eligible}} minutes</div>
+            {{?}}
+        </div>
+    </div>
+    </div>
+#}}
+{{#def.include('./template/main_old')}}

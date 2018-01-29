@@ -1,0 +1,136 @@
+/* Top bar
+   ========================================================================== */
+
+/* Foundation Reset */
+.nav-top-bar h1{
+    line-height: inherit !important;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-top-bar {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    height: 45px;
+    line-height: 45px;
+}
+
+.nav-top-bar div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.title {
+    float: left;
+}
+
+.title h1, .title img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.title h1, .title a {
+    color: black;
+    font-size: 25px;
+    font-family: "Courier New";
+    font-weight: 700;
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+.table-title {
+    font-size: 25px;
+    font-family: rbn;
+}
+
+.user-login {
+    float: right;
+}
+
+.user-login a {
+    margin-left: 1rem;
+}
+
+.balance-bits {
+    color: black;
+    margin-right: 1rem;
+    font-size: 1rem;
+}
+
+.username {
+    margin-right: 1rem;
+    font-size: 0.8125rem;
+}
+
+
+.new-theme {
+
+}
+
+.new-theme a {
+    border: 2px solid grey;
+
+    padding: 2px;
+    color: #e58929;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* Small screens */
+@media only screen and (max-width: 40em) {
+    .table-title {
+        display: none !important;
+    }
+}
+
+/* Messages for errors/success */
+.success {
+    position: relative;
+    background-color: #7cba00;
+    color: #f5f5f5;
+    font-size: 12px;
+    padding: 5px 15px;
+    margin: 0px 20%;
+    text-align: center;
+    line-height: 1;
+}
+
+.success a {
+    color: #fff;
+}
+
+.warning {
+    position: relative;
+    background-color: #ba3c12;
+    color: #f5f5f5;
+    font-size: 12px;
+    padding: 5px 15px;
+    margin: 0px 20%;
+    text-align: center;
+    line-height: 1;
+}
+
+
+/* FOUNDATION MEDIA QUERIES */
+
+@media only screen { } /* Define mobile styles */
+
+@media only screen and (max-width: 40em) { } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+
+@media only screen and (min-width: 40.063em) { } /* min-width 641px, medium screens */
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
+
+@media only screen and (min-width: 64.063em) { } /* min-width 1025px, large screens */
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { } /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+
+
+@media only screen and (min-width: 90.063em) { } /* min-width 1441px, xlarge screens */
+
+@media only screen and (min-width: 90.063em) and (max-width: 120em) { } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+
+@media only screen and (min-width: 120.063em) { } /* min-width 1921px, xxlarge screens */

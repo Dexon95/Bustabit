@@ -1,0 +1,37 @@
+{{##def.page_title = 'Login' #}}
+
+{{##def.content:
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script>
+	var submitEnabled = false;
+	function enableSubmit() {
+		submitEnabled = true;
+    var s = document.getElementById('loginSubmit');
+    s.style.display = 'block';
+  }
+</script>
+<div class="login">
+    <form action="/login" method="post" onsubmit="return submitEnabled;">
+
+            <input type="hidden" name="username" value="{{!it.username}}" />
+            <input type="hidden" name="password" value="{{!it.password}}" />
+      <div class="row">
+            <div class="large-12 columns">
+                <label>Please enter your 2FA token:
+                    <input type="text" pattern="[0-9]{6}" name="otp" required />
+                </label>
+            </div>
+      </div>
+      <div class="row">
+        <div class="g-recaptcha" data-sitekey="{{=it.recaptchaKey}}" data-callback="enableSubmit"></div>
+      </div>
+       <div class="row">
+            <div class="large-12 columns">
+                <input  id="loginSubmit" style="display: none" class="border-button right blue" type="submit" value="Submit"/>
+            </div>
+        </div>
+    </form>
+</div>
+
+#}}
+{{#def.include('./template/main_old')}}

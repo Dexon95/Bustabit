@@ -1,0 +1,25 @@
+#hotkeys-settings-container {
+}
+
+#hotkeys-settings-container .activation-row {
+}
+
+#hotkeys-settings-container #activate-hotkeys {
+}
+
+#hotkeys-settings-container label {
+}
+
+#hotkeys-settings-container .hotkeys-list {
+    margin-top: 1rem;
+}
+
+#hotkeys-settings-container .hotkeys-list span {
+    display: block;
+    line-height: 2rem;
+    padding-left: 1rem;
+}
+
+#hotkeys-settings-container .hotkeys-list span:nth-of-type(odd) {
+    background-color: whitesmoke;
+}

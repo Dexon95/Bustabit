@@ -1,0 +1,153 @@
+/* Foundation Reset */
+.nav-top-bar h1{
+    /* line-height: inherit !important; */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-top-bar {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    height: 40px;
+    line-height: 40px;
+}
+
+.nav-top-bar div {
+    font-family: "Verlag A", "Verlag B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    /* padding: 0; */
+    /* margin: 0; */
+}
+
+.nav-top-bar .title {
+    float: left;
+}
+
+.nav-top-bar .title h1, .title img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nav-top-bar .title h1 {
+    /*color: black;*/
+    /*font-size: 25px;*/
+    /*font-family: "Courier New";*/
+    /*font-weight: 700;*/
+    text-decoration: none;
+    color: #e58929;
+    line-height: 40px;   
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 20px;
+    font-family: "Courier New";
+}
+
+.nav-top-bar .table-title {
+    font-size: 25px;
+    font-family: rbn;
+}
+
+.nav-top-bar .user-login {
+    float: right;
+    font-size: 20px;
+}
+
+.nav-top-bar .user-login a {
+    /* margin-left: 1rem; */
+}
+
+.nav-top-bar .balance-bits {
+    color: black;
+    /* margin-right: 1rem; */
+    font-size: 20px;
+    display: inline-block;
+    margin: 0;
+    padding-right: 10px;
+}
+
+.nav-top-bar .balance-bits span {
+    /* display: block; */
+    line-height: 40px;
+
+}
+
+.nav-top-bar .username {
+    font-family: "Verlag A", "Verlag B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 40px;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    padding-right: 40px;
+    font-weight: bold;
+}
+
+.nav-top-bar .username a {
+    
+}
+
+.nav-top-bar .register {
+    display: inline-block;
+
+}
+
+.nav-top-bar .register a {
+
+}
+
+.nav-top-bar .login {
+    display: inline-block;
+
+    padding-right: 40px;
+}
+
+.nav-top-bar .login a {
+    
+}
+
+.nav-top-bar .new-theme a {
+    border: 2px solid grey;
+    padding: 2px;
+    color: #e58929;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* Small screens */
+@media only screen and (max-width: 40em) {
+    .nav-top-bar .table-title {
+        display: none !important;
+    }
+}
+
+/* Messages for errors/success */
+.success {
+    position: relative;
+    background-color: #7cba00;
+    color: #f5f5f5;
+    font-size: 12px;
+    padding: 5px 15px;
+    margin: 0px 20%;
+    text-align: center;
+    line-height: 1;
+}
+
+.success a {
+    color: #fff;
+}
+
+.warning {
+    position: relative;
+    background-color: #ba3c12;
+    color: #f5f5f5;
+    font-size: 12px;
+    padding: 5px 15px;
+    margin: 0px 20%;
+    text-align: center;
+    line-height: 1;
+}
+
+.register {
+    /* margin-left: 30%; */
+    padding-right: 20px;
+}

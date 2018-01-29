@@ -1,0 +1,1 @@
+worker: node daemon.js

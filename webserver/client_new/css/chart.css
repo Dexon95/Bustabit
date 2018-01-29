@@ -1,0 +1,53 @@
+#chart-inner-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#chart-inner-container .anim-cont {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#chart-inner-container .anim-cont .nyan{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#chart-inner-container .anim-cont .nyan.show{
+    display: inherit;
+}
+
+#chart-inner-container .anim-cont .nyan img {
+    display: block;
+    max-width: 90%;
+    max-height: 40%;
+    width: auto;
+    height: auto;
+}
+
+#chart-inner-container .max-profit {
+    position: absolute;
+    /* bottom: 0; */
+    top: 0;
+    /* right: 10%; */
+    left: 10%;
+    font-size: 0.5rem;
+    color: rgb(76, 75, 75);
+}
+
+#chart-inner-container canvas.hide {
+    display: none;
+}
+
+/** Small screen and small controls **/
+@media handheld, only screen and (max-width: 767px) {
+    #chart-inner-container.small .max-profit {
+
+    }
+}
