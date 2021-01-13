@@ -1,5 +1,5 @@
 module.exports = {
-    PORT: process.env.PORT || 3842,
+    PORT: 3842,
     USE_HTTPS: process.env.USE_HTTPS,
     HTTPS_KEY: process.env.HTTPS_KEY || './key.pem',
     HTTPS_CERT: process.env.HTTPS_CERT || './cert.pem',
